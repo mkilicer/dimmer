@@ -1,0 +1,12 @@
+"Brightness" = "亮度";
+"Extra dimming" = "额外调暗";
+"Launch at login" = "登录时启动";
+"Scroll to change brightness" = "滚动以调节亮度";
+"Monitor" = "显示器";
+"The monitor does not answer DDC" = "显示器未响应 DDC";
+"Day" = "白天";
+"Evening" = "傍晚";
+"Night" = "夜间";
+"%@  (%d%% + dimming %d%%)" = "%@  (%d%% + 调暗 %d%%)";
+"%@  (%d%%)" = "%@  (%d%%)";
+"Quit" = "退出";

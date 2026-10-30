@@ -1,0 +1,12 @@
+"Brightness" = "Parlaklık";
+"Extra dimming" = "Ekstra karartma";
+"Launch at login" = "Açılışta başlat";
+"Scroll to change brightness" = "Kaydırarak parlaklığı değiştir";
+"Monitor" = "Monitör";
+"The monitor does not answer DDC" = "Monitör DDC'ye cevap vermiyor";
+"Day" = "Gündüz";
+"Evening" = "Akşam";
+"Night" = "Gece";
+"%@  (%d%% + dimming %d%%)" = "%@  (%%%d + karartma %%%d)";
+"%@  (%d%%)" = "%@  (%%%d)";
+"Quit" = "Çıkış";

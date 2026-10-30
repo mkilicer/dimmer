@@ -1,0 +1,12 @@
+"Brightness" = "السطوع";
+"Extra dimming" = "تعتيم إضافي";
+"Launch at login" = "التشغيل عند تسجيل الدخول";
+"Scroll to change brightness" = "مرّر لتغيير السطوع";
+"Monitor" = "الشاشة";
+"The monitor does not answer DDC" = "الشاشة لا تستجيب لـ DDC";
+"Day" = "نهار";
+"Evening" = "مساء";
+"Night" = "ليل";
+"%@  (%d%% + dimming %d%%)" = "%@  (%d%% + تعتيم %d%%)";
+"%@  (%d%%)" = "%@  (%d%%)";
+"Quit" = "إنهاء";

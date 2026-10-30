@@ -1,0 +1,12 @@
+"Brightness" = "Яркость";
+"Extra dimming" = "Дополнительное затемнение";
+"Launch at login" = "Запускать при входе";
+"Scroll to change brightness" = "Прокрутите, чтобы изменить яркость";
+"Monitor" = "Монитор";
+"The monitor does not answer DDC" = "Монитор не отвечает на DDC";
+"Day" = "День";
+"Evening" = "Вечер";
+"Night" = "Ночь";
+"%@  (%d%% + dimming %d%%)" = "%@  (%d%% + затемнение %d%%)";
+"%@  (%d%%)" = "%@  (%d%%)";
+"Quit" = "Выйти";

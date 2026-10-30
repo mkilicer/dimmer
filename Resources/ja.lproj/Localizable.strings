@@ -1,0 +1,12 @@
+"Brightness" = "明るさ";
+"Extra dimming" = "追加の減光";
+"Launch at login" = "ログイン時に起動";
+"Scroll to change brightness" = "スクロールで明るさを変更";
+"Monitor" = "モニタ";
+"The monitor does not answer DDC" = "モニタがDDCに応答しません";
+"Day" = "昼";
+"Evening" = "夕方";
+"Night" = "夜";
+"%@  (%d%% + dimming %d%%)" = "%@  (%d%% + 減光 %d%%)";
+"%@  (%d%%)" = "%@  (%d%%)";
+"Quit" = "終了";

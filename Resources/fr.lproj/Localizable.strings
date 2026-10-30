@@ -1,0 +1,12 @@
+"Brightness" = "Luminosité";
+"Extra dimming" = "Assombrissement supplémentaire";
+"Launch at login" = "Ouvrir à la connexion";
+"Scroll to change brightness" = "Faites défiler pour changer la luminosité";
+"Monitor" = "Moniteur";
+"The monitor does not answer DDC" = "Le moniteur ne répond pas au DDC";
+"Day" = "Jour";
+"Evening" = "Soir";
+"Night" = "Nuit";
+"%@  (%d%% + dimming %d%%)" = "%@  (%d %% + assombrissement %d %%)";
+"%@  (%d%%)" = "%@  (%d %%)";
+"Quit" = "Quitter";

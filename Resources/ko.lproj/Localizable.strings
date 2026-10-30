@@ -1,0 +1,12 @@
+"Brightness" = "밝기";
+"Extra dimming" = "추가 어둡게";
+"Launch at login" = "로그인 시 실행";
+"Scroll to change brightness" = "스크롤하여 밝기 변경";
+"Monitor" = "모니터";
+"The monitor does not answer DDC" = "모니터가 DDC에 응답하지 않음";
+"Day" = "낮";
+"Evening" = "저녁";
+"Night" = "밤";
+"%@  (%d%% + dimming %d%%)" = "%@  (%d%% + 어둡게 %d%%)";
+"%@  (%d%%)" = "%@  (%d%%)";
+"Quit" = "종료";

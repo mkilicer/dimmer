@@ -1,0 +1,12 @@
+"Brightness" = "Helderheid";
+"Extra dimming" = "Extra dimmen";
+"Launch at login" = "Open bij inloggen";
+"Scroll to change brightness" = "Scroll om de helderheid te wijzigen";
+"Monitor" = "Monitor";
+"The monitor does not answer DDC" = "De monitor reageert niet op DDC";
+"Day" = "Dag";
+"Evening" = "Avond";
+"Night" = "Nacht";
+"%@  (%d%% + dimming %d%%)" = "%@  (%d%% + dimmen %d%%)";
+"%@  (%d%%)" = "%@  (%d%%)";
+"Quit" = "Stop";

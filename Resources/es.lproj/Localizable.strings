@@ -1,0 +1,12 @@
+"Brightness" = "Brillo";
+"Extra dimming" = "Atenuación extra";
+"Launch at login" = "Abrir al iniciar sesión";
+"Scroll to change brightness" = "Desplaza para cambiar el brillo";
+"Monitor" = "Monitor";
+"The monitor does not answer DDC" = "El monitor no responde a DDC";
+"Day" = "Día";
+"Evening" = "Tarde";
+"Night" = "Noche";
+"%@  (%d%% + dimming %d%%)" = "%@  (%d %% + atenuación %d %%)";
+"%@  (%d%%)" = "%@  (%d %%)";
+"Quit" = "Salir";

@@ -4,6 +4,9 @@ import ServiceManagement
 // Menu bar app: monitor brightness over DDC/CI, plus an extra software dim (gamma) for below the panel's minimum.
 // Scrolling on the menu bar icon changes brightness, so no keyboard or monitor buttons are needed.
 
+/// UI text; translations live in Resources/<lang>.lproj/Localizable.strings, English is the key.
+func L(_ key: String) -> String { NSLocalizedString(key, comment: "") }
+
 final class SliderRow: NSView {
     let slider: NSSlider
     private let value = NSTextField(labelWithString: "")
@@ -47,9 +50,9 @@ final class App: NSObject, NSApplicationDelegate, NSMenuDelegate {
     private var sending = false
     private let defaults = UserDefaults.standard
 
-    private let brightnessRow = SliderRow(title: "Parlaklık", max: 100)
-    private let dimRow = SliderRow(title: "Ekstra karartma", max: 80)
-    private let loginItem = NSMenuItem(title: "Açılışta başlat", action: #selector(toggleLogin), keyEquivalent: "")
+    private let brightnessRow = SliderRow(title: L("Brightness"), max: 100)
+    private let dimRow = SliderRow(title: L("Extra dimming"), max: 80)
+    private let loginItem = NSMenuItem(title: L("Launch at login"), action: #selector(toggleLogin), keyEquivalent: "")
 
     private var brightness: Int {
         get { defaults.object(forKey: "brightness") as? Int ?? 50 }
@@ -61,24 +64,24 @@ final class App: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
 
     func applicationDidFinishLaunching(_ note: Notification) {
-        item.button?.image = NSImage(systemSymbolName: "sun.max", accessibilityDescription: "Parlaklık")
-        item.button?.toolTip = "Kaydırarak parlaklığı değiştir"
+        item.button?.image = NSImage(systemSymbolName: "sun.max", accessibilityDescription: L("Brightness"))
+        item.button?.toolTip = L("Scroll to change brightness")
 
         let menu = NSMenu()
         menu.delegate = self
-        let name = NSMenuItem(title: NSScreen.screens.first?.localizedName ?? "Monitör", action: nil, keyEquivalent: "")
+        let name = NSMenuItem(title: NSScreen.screens.first?.localizedName ?? L("Monitor"), action: nil, keyEquivalent: "")
         name.isEnabled = false
         menu.addItem(name)
         if ddc == nil {
-            let warn = NSMenuItem(title: "Monitör DDC'ye cevap vermiyor", action: nil, keyEquivalent: "")
+            let warn = NSMenuItem(title: L("The monitor does not answer DDC"), action: nil, keyEquivalent: "")
             warn.isEnabled = false
             menu.addItem(warn)
         }
         menu.addItem(row(brightnessRow))
         menu.addItem(row(dimRow))
         menu.addItem(.separator())
-        for (title, b, d) in [("Gündüz", 70, 0), ("Akşam", 30, 0), ("Gece", 0, 30)] {
-            let preset = NSMenuItem(title: "\(title)  (\(b)%\(d > 0 ? " + karartma \(d)%" : ""))", action: #selector(applyPreset), keyEquivalent: "")
+        for (title, b, d) in [(L("Day"), 70, 0), (L("Evening"), 30, 0), (L("Night"), 0, 30)] {
+            let preset = NSMenuItem(title: d > 0 ? String(format: L("%@  (%d%% + dimming %d%%)"), title, b, d) : String(format: L("%@  (%d%%)"), title, b), action: #selector(applyPreset), keyEquivalent: "")
             preset.target = self
             preset.representedObject = [b, d]
             menu.addItem(preset)
@@ -86,7 +89,7 @@ final class App: NSObject, NSApplicationDelegate, NSMenuDelegate {
         menu.addItem(.separator())
         loginItem.target = self
         menu.addItem(loginItem)
-        menu.addItem(NSMenuItem(title: "Çıkış", action: #selector(NSApplication.terminate), keyEquivalent: "q"))
+        menu.addItem(NSMenuItem(title: L("Quit"), action: #selector(NSApplication.terminate), keyEquivalent: "q"))
         item.menu = menu
 
         brightnessRow.onChange = { [weak self] in self?.setBrightness($0) }
